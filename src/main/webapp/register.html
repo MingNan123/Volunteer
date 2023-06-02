@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>js实现注册表单验证</title>
+    <link href="css/register.css" rel="stylesheet">
+</head>
+<body>
+<div  id="registerDiv">
+
+    <form id="test-register" action="registerServlet"  method="post" onsubmit="return checkRegisterForm()">
+        <h1 id="registerMsg">注册页面</h1>
+        <p id="test-error" style="color:red"></p>
+        <p>
+            &ensp;用户名:&ensp; <input type="text" id="username" name="username">
+        </p>
+        <p>
+            密&ensp;&ensp;&ensp;码: &ensp;<input type="password" id="password" name="password">
+        </p>
+        <p>
+            确认密码: <input type="password" id="password2">
+        </p>
+        <div id="subDiv">
+            <input type="submit" class="button" value="注册">
+            <input type="reset" class="button" value="重置">&nbsp;&nbsp;&nbsp;
+            <a href="login.jsp">已有账号！登录</a>
+        </div>
+    </form>
+</div>
+<script>
+    // 用户名必须是3-8位英文字母或数字；
+    // 口令必须是6-20位；
+    // 两次输入口令必须一致
+    function checkRegisterForm(){
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
+        var password2 = document.getElementById("password2");
+        var testerror = document.getElementById("test-error");
+        var name_re=/^\S[0-9a-zA-Z]{2,8}/;
+        var pwd_re=/^\S{6,20}$/;
+        if(name_re.test(username.value)&&pwd_re.test(password.value)&&password.value===password2.value){
+            alert("提交成功！");
+        }
+        if(!name_re.test(username.value)){
+            alert("用户名必须是2-10位英文字母或数字");
+        }
+        if(!pwd_re.test(password.value)){
+            alert("密码必须是6-20位");
+            console.log("password="+password.value+"password2="+password2.value);
+        }else{
+            alert("密码符合 要求")
+        }
+        if(password.value!==password2.value){
+            alert("密码输入不一致");
+        }
+    }
+</script>
+</body>
+</html>

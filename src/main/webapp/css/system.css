@@ -1,0 +1,142 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #FFFFFF;
+}
+.video{
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+}
+one{
+    width: 30px;
+}
+
+#menu{
+    width: 200px;
+    height: 44px; /*设置盒子内容的高度为44像素*/
+    position: fixed;
+    top: 150px;
+}
+#menu a:hover,#menu a.selected{  	/*设置nav块中的超链接在鼠标滑过或选中状态时的属性*/
+    color:#FFFFFF; 				/*设置超链接文字颜色*/
+    background-color: #cc0000;		/*设置超链接背景颜色*/
+}
+#menu a{
+    font-family: "宋体";	            /*设置超链接字体*/
+    font-weight: bold;
+    font-size: 18px; 				/*设置超链接文字大小*/
+    color: #000000; 				/*设置超链接文字颜色*/
+    line-height:30px; 				/*设置超链接行高*/
+    padding:0px 13px; 				/*设置超链接上下内边距为0，左右为8像素*/
+    text-decoration: none; 			/*清除超链接下划线*/
+    display:inline-block; 			/*将超链接显示为行内块元素*/
+}
+h1,h2,h3,h4,h5{
+    text-align:left;
+    margin-left: 150px;
+    font-family: "仿宋";
+    font-size: 30px;
+    font-weight:bolder;
+    line-height: 45px;
+}
+h6{
+    background-color: red;
+    text-align:center;
+    margin-left: 150px;
+    font-family: "楷体";
+    font-size: 40px;
+    font-weight:bolder;
+}
+#i{
+    background-color:#FFFFFF;
+    margin-left: 150px;
+    font-family: "楷体";
+    font-size: 20px;
+    font-weight:bolder;
+}
+#i ul li{
+    list-style: none;
+    margin-top: 20px;
+    line-height: 50px;
+    text-align: left;
+}
+li img{
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+table{
+    text-align: center;
+    margin: 50px auto;
+}
+.ii {
+    background-color:#FFFFFF;
+    margin-left: 150px;
+    font-family: "楷体";
+    font-size: 20px;
+    font-weight:bolder;
+}
+.ii ul li{
+    list-style: none;
+    margin-top: 20px;
+    line-height: 50px;
+    text-align: left;
+}
+.two{
+    width: 100px;
+    height: 44px;
+    text-align: center;
+}
+.iii table{
+    width: 600px;
+    height: 90px;
+    align:center;
+    font-weight: bold;
+    text-align: left;
+}
+.iii table td{
+    /*  width: 50px;
+      height:40px;*/
+    background-color:firebrick;
+    text-align: center;
+}
+#main{
+    text-align: center;
+    margin: 0 auto;
+    padding: 0px;
+    margin: 0;
+
+}
+#main ul li{
+    text-align: center;
+}
+#main textarea{
+    text-align: center;
+}
+#main1{
+    width: 600px;
+    height: 320px;
+
+}
+#main #main1{
+    position: absolute;
+    left: 470px;
+    top: 300px;
+    background-color: white;
+}
+#main ul li{
+    list-style: none;
+}
+footer{
+    background-color: aqua;
+}
+#main #main2{
+    position: absolute;
+    bottom: 1px;
+    left: 600px;
+}
